@@ -2,6 +2,7 @@ package testcase;
 
 import java.io.IOException;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,10 +17,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import basetest.base;
+import pages.cartpage;
+import pages.registerpage;
 
 public class cart extends base {
 	
-WebDriver driver;
+public WebDriver driver;
+registerpage re ; 
+cartpage cp;
 	
 	@BeforeMethod
 	public void setup() throws IOException
@@ -29,6 +34,7 @@ WebDriver driver;
 		
 		loadproperty();
 		driver = launchapplication(p.getProperty("browser"));
+		re = new registerpage(driver) ;
 	}
 
 	@AfterMethod
@@ -40,7 +46,18 @@ WebDriver driver;
 	public void productlistpage()
 	{
 		
-		driver.findElement(By.cssSelector("[name='username']")).clear();
+		
+	  re.usernameactionclear();
+		re.usernameaction(p.getProperty("newusername"));
+		re.passwordactionclear();
+		re.passwordaction(p.getProperty("newpassword"));
+		 cp =	re.signclick();
+		
+	
+		cp.quicklinksclick();
+		Assert.assertFalse(cp.cartoneresult());
+		
+		/*driver.findElement(By.cssSelector("[name='username']")).clear();
 		driver.findElement(By.cssSelector("[name='username']")).sendKeys(p.getProperty("username"));
 		driver.findElement(By.cssSelector("[name='password']")).clear();
 		driver.findElement(By.cssSelector("[name='password']")).sendKeys(p.getProperty("password"));
@@ -48,15 +65,32 @@ WebDriver driver;
              driver.findElement(By.xpath("//*[@id=\"QuickLinks\"]/a[2]/img")).click();
 		
 		
-		driver.findElement(By.linkText("K9-BD-01")).click();
-		Assert.assertTrue(driver.findElement(By.xpath("//div/h2")).isDisplayed());
+		driver.findElement(By.linkText("K9-BD-01")).click();*/
+		
 	
 	}
-	@Test(priority=2)
-	public void productcart()
+	@Test(priority=2, dependsOnMethods = {"productlistpage"})
+	public void productcart() throws InterruptedException
 	{
 		
-		driver.findElement(By.cssSelector("[name='username']")).clear();
+	   re.usernameactionclear();
+		  re.usernameactionclear();
+			re.usernameaction(p.getProperty("newusername"));
+			re.passwordactionclear();
+			re.passwordaction(p.getProperty("newpassword"));
+		cp = re.signclick();
+		
+	
+		cp.quicklinksclick();
+		cp.breedclick();
+		cp.addtocartclick();
+		cp.valueclear();
+		cp.valueenter();
+		cp.updatequantityclick();
+		cp.checkoutclick();
+		
+		Assert.assertTrue(cp.carttworesult());
+		/*driver.findElement(By.cssSelector("[name='username']")).clear();
 		driver.findElement(By.cssSelector("[name='username']")).sendKeys(p.getProperty("username"));
 		driver.findElement(By.cssSelector("[name='password']")).clear();
 		driver.findElement(By.cssSelector("[name='password']")).sendKeys(p.getProperty("password"));
@@ -72,10 +106,13 @@ WebDriver driver;
 		
 		driver.findElement(By.name("updateCartQuantities")).click();
 		driver.findElement(By.linkText("Proceed to Checkout")).click();
-		Assert.assertTrue(driver.findElement(By.xpath("//tr/th")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//tr/th")).isDisplayed());*/
 		
 		
 	}
 	
 
 }
+
+
+

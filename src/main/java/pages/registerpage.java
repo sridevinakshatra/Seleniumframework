@@ -1,14 +1,17 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class register {
+public class registerpage {
 	
 	WebDriver driver;
+	
+	
 	//driver.findElement(By.linkText("Register Now!")).click();
 	/*driver.findElement(By.cssSelector("[name='username']")).sendKeys(p.getProperty("newusername"));
 	driver.findElement(By.cssSelector("[name='password']")).sendKeys(p.getProperty("newpassword"));
@@ -60,28 +63,122 @@ public class register {
 
     @FindBy(css = "[name='account.country']")  
     private WebElement country;
+    
+    @FindBy(css = "[name='signon']")  
+    private WebElement signin;
+    
+    
+    @FindBy(xpath = "(//img)[19]")  
+    private WebElement signinpage;
+    
+    
+    @FindBy(linkText = "Sign Out")  
+    private WebElement signout;
+    
+    
+    
+    
+    //Assert.assertTrue(driver.findElement(By.xpath("(//img)[19]")).isDisplayed());
 	
-	 public register(WebDriver driver) {
+	 public registerpage(WebDriver driver) {
 	        this.driver = driver;
 	        PageFactory.initElements(driver, this); 
 	    }
+	 
+	 
+	 public boolean signinpagedisplayed()
+	 {
+		boolean resultin = signinpage.isDisplayed();
+		 return resultin;
+	 }
+	 
+
+	 public boolean signoutpagedisplayed()
+	 {
+		boolean resultout = signout.isDisplayed();
+		 return resultout;
+	 }
+	 
+	 
 	
 public void registeraction()
 {
 	register.click();
-	  username.sendKeys(newUsername);
-	  password.sendKeys(newPassword);
-	  repeatedPassword.sendKeys(newPassword);
-	   firstname.sendKeys(firstName);
-	   lastname.sendKeys(lastName);
-	   email.sendKeys(lastName);
-	   phone.sendKeys(email);
-	   address.sendKeys(email);
-	   state.sendKeys(email);
-	   zip.sendKeys(email);
-	   country.sendKeys(email);
+	 
+	 
 	   
 }
+
+public void usernameaction(String name)
+{
+	 username.sendKeys(name);
+	
+}
+
+public void usernameactionclear()
+{
+	 username.clear();
+	
+}
+
+public void passwordactionclear()
+{
+	password.clear();
+	
+}
+public void passwordaction(String ps)
+{
+	password.sendKeys(ps);
+}
+public void againpasswordaction (String againpassword)
+{
+	repeatedPassword.sendKeys( againpassword);
+}
+public void firstnameaction(String fs)
+{
+	firstname.sendKeys(fs);
+}
+public void lastnameaction(String ln)
+{
+	lastname.sendKeys(ln);
+}
+public void emailaction(String em)
+{
+	email.sendKeys(em);
+}
+public void phoneaction(String ph)
+{
+	phone.sendKeys(ph);
+}
+public void addressaction(String add)
+{
+	address.sendKeys(add);
+}
+public void cityaction(String ct)
+{
+	 city.sendKeys(ct);
+}
+public void stateaction(String st)
+{
+	 state.sendKeys(st);
+}
+public void zipaction(String zp)
+{
+	 zip.sendKeys(zp);
+}
+public homepage countryaction(String co)
+{
+	 country.sendKeys(co);
+	 return new homepage(driver);
+}
+
+public cartpage signclick()
+{
+	signin.click();
+	return new cartpage(driver);
+}
+
+
 	
 	
 	

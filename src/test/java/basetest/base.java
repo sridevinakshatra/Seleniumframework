@@ -23,7 +23,7 @@ public class base {
 	public Properties pd;
 	
 	
-	public void loadproperty() throws IOException
+	public  void loadproperty() throws IOException
 	{
 	
 		try {
