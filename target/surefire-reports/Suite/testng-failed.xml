@@ -6,16 +6,9 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="testcase.cart">
-        <methods>
-          <include name="teardown"/>
-          <include name="productcart"/>
-          <include name="productlistpage"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testcase.cart -->
       <class name="testcase.register">
         <methods>
+          <include name="sign" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="teardown"/>
           <include name="formfill"/>

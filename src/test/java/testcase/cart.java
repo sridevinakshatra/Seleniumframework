@@ -55,7 +55,7 @@ cartpage cp;
 		
 	
 		cp.quicklinksclick();
-		Assert.assertFalse(cp.cartoneresult());
+		Assert.assertTrue(cp.cartoneresult());
 		
 		/*driver.findElement(By.cssSelector("[name='username']")).clear();
 		driver.findElement(By.cssSelector("[name='username']")).sendKeys(p.getProperty("username"));

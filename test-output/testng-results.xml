@@ -1,39 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="3" failed="2" skipped="1">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-13T15:57:03 IST" name="Suite" finished-at="2024-10-13T15:57:44 IST" duration-ms="41180">
+  <suite started-at="2024-11-02T16:57:58 IST" name="Suite" finished-at="2024-11-02T16:58:43 IST" duration-ms="44738">
     <groups>
     </groups>
-    <test started-at="2024-10-13T15:57:03 IST" name="Test" finished-at="2024-10-13T15:57:44 IST" duration-ms="41180">
+    <test started-at="2024-11-02T16:57:58 IST" name="Test" finished-at="2024-11-02T16:58:43 IST" duration-ms="44738">
       <class name="testcase.register">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.register@1fa121e2]" started-at="2024-10-13T15:57:03 IST" name="setup" finished-at="2024-10-13T15:57:08 IST" duration-ms="4756" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.register@74e52ef6]" started-at="2024-11-02T16:57:59 IST" name="setup" finished-at="2024-11-02T16:58:06 IST" duration-ms="7287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="formfill()[pri:1, instance:testcase.register@1fa121e2]" started-at="2024-10-13T15:57:08 IST" name="formfill" finished-at="2024-10-13T15:57:11 IST" duration-ms="3087" status="FAIL">
+        <test-method signature="formfill()[pri:1, instance:testcase.register@74e52ef6]" started-at="2024-11-02T16:58:06 IST" name="formfill" finished-at="2024-11-02T16:58:09 IST" duration-ms="2858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formfill -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.register@74e52ef6]" started-at="2024-11-02T16:58:09 IST" name="teardown" finished-at="2024-11-02T16:58:09 IST" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.register@74e52ef6]" started-at="2024-11-02T16:58:11 IST" name="setup" finished-at="2024-11-02T16:58:14 IST" duration-ms="3292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sign(java.lang.String,java.lang.String)[pri:2, instance:testcase.register@74e52ef6]" started-at="2024-11-02T16:58:14 IST" name="sign" data-provider="datasupply" finished-at="2024-11-02T16:58:15 IST" duration-ms="837" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eedfssfssbnnvvrv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eedfssfssbnnvvrv]]>
+              </value>
+            </param>
+          </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//img)[19]"}
-  (Session info: chrome=129.0.6668.90)
+              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Sign Out"}
+  (Session info: chrome=130.0.6723.92)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3f7e5b882df283683573b7ebc4840bab, findElement {using=xpath, value=(//img)[19]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\NAKSHA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61759}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61759/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3f7e5b882df283683573b7ebc4840bab]]>
+Command: [14974dd680908e8f4857afeb45ee8047, findElement {using=link text, value=Sign Out}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\NAKSHA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50793}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50793/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 14974dd680908e8f4857afeb45ee8047]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//img)[19]"}
-  (Session info: chrome=129.0.6668.90)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Sign Out"}
+  (Session info: chrome=130.0.6723.92)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3f7e5b882df283683573b7ebc4840bab, findElement {using=xpath, value=(//img)[19]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\NAKSHA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61759}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61759/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3f7e5b882df283683573b7ebc4840bab
+Command: [14974dd680908e8f4857afeb45ee8047, findElement {using=link text, value=Sign Out}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\NAKSHA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50793}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50793/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 14974dd680908e8f4857afeb45ee8047
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -53,8 +77,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-at pages.registerpage.signinpagedisplayed(registerpage.java:91)
-at testcase.register.formfill(register.java:74)
+at pages.registerpage.signoutpagedisplayed(registerpage.java:98)
+at testcase.register.sign(register.java:111)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -88,145 +112,60 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- formfill -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.register@1fa121e2]" started-at="2024-10-13T15:57:11 IST" name="teardown" finished-at="2024-10-13T15:57:12 IST" duration-ms="443" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.register@1fa121e2]" started-at="2024-10-13T15:57:13 IST" name="setup" finished-at="2024-10-13T15:57:18 IST" duration-ms="4525" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="sign(java.lang.String,java.lang.String)[pri:2, instance:testcase.register@1fa121e2]" started-at="2024-10-13T15:57:18 IST" name="sign" data-provider="datasupply" finished-at="2024-10-13T15:57:19 IST" duration-ms="1386" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[eedfssfssbnnvvrv]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[eedfssfssbnnvvrv]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- sign -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.register@1fa121e2]" started-at="2024-10-13T15:57:19 IST" name="teardown" finished-at="2024-10-13T15:57:20 IST" duration-ms="337" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.register@74e52ef6]" started-at="2024-11-02T16:58:15 IST" name="teardown" finished-at="2024-11-02T16:58:16 IST" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testcase.register -->
       <class name="testcase.cart">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.cart@41a2befb]" started-at="2024-10-13T15:57:20 IST" name="setup" finished-at="2024-10-13T15:57:24 IST" duration-ms="3908" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.cart@55b0dcab]" started-at="2024-11-02T16:58:16 IST" name="setup" finished-at="2024-11-02T16:58:19 IST" duration-ms="3302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="productlistpage()[pri:1, instance:testcase.cart@41a2befb]" started-at="2024-10-13T15:57:24 IST" name="productlistpage" finished-at="2024-10-13T15:57:25 IST" duration-ms="1581" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-at org.junit.Assert.fail(Assert.java:87)
-at org.junit.Assert.assertTrue(Assert.java:42)
-at org.junit.Assert.assertFalse(Assert.java:65)
-at org.junit.Assert.assertFalse(Assert.java:75)
-at testcase.cart.productlistpage(cart.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="productlistpage()[pri:1, instance:testcase.cart@55b0dcab]" started-at="2024-11-02T16:58:19 IST" name="productlistpage" finished-at="2024-11-02T16:58:20 IST" duration-ms="1458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productlistpage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.cart@41a2befb]" started-at="2024-10-13T15:57:25 IST" name="teardown" finished-at="2024-10-13T15:57:26 IST" duration-ms="357" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.cart@55b0dcab]" started-at="2024-11-02T16:58:20 IST" name="teardown" finished-at="2024-11-02T16:58:21 IST" duration-ms="243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="productcart()[pri:2, instance:testcase.cart@41a2befb]" started-at="2024-10-13T15:57:26 IST" name="productcart" finished-at="2024-10-13T15:57:26 IST" depends-on-methods="testcase.cart.productlistpage" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method testcase.cart.productcart() on instance testcase.cart@41a2befb depends on not successfully finished methods 
-[testcase.cart.productlistpage() on instance testcase.cart@41a2befb]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method testcase.cart.productcart() on instance testcase.cart@41a2befb depends on not successfully finished methods 
-[testcase.cart.productlistpage() on instance testcase.cart@41a2befb]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.cart@55b0dcab]" started-at="2024-11-02T16:58:21 IST" name="setup" finished-at="2024-11-02T16:58:24 IST" duration-ms="3512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="productcart()[pri:2, instance:testcase.cart@55b0dcab]" started-at="2024-11-02T16:58:24 IST" name="productcart" finished-at="2024-11-02T16:58:27 IST" depends-on-methods="testcase.cart.productlistpage" duration-ms="3108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productcart -->
-      </class> <!-- testcase.cart -->
-      <class name="testcase.checkout">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.checkout@6c40365c]" started-at="2024-10-13T15:57:26 IST" name="setup" finished-at="2024-10-13T15:57:29 IST" duration-ms="3701" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkoutpage()[pri:1, instance:testcase.checkout@6c40365c]" started-at="2024-10-13T15:57:29 IST" name="checkoutpage" finished-at="2024-10-13T15:57:34 IST" duration-ms="4356" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkoutpage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.checkout@6c40365c]" started-at="2024-10-13T15:57:34 IST" name="teardown" finished-at="2024-10-13T15:57:34 IST" duration-ms="408" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.cart@55b0dcab]" started-at="2024-11-02T16:58:27 IST" name="teardown" finished-at="2024-11-02T16:58:27 IST" duration-ms="281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.checkout@6c40365c]" started-at="2024-10-13T15:57:34 IST" name="setup" finished-at="2024-10-13T15:57:38 IST" duration-ms="4054" status="PASS">
+      </class> <!-- testcase.cart -->
+      <class name="testcase.checkout">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.checkout@38afe297]" started-at="2024-11-02T16:58:27 IST" name="setup" finished-at="2024-11-02T16:58:31 IST" duration-ms="3474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="payment()[pri:2, instance:testcase.checkout@6c40365c]" started-at="2024-10-13T15:57:38 IST" name="payment" finished-at="2024-10-13T15:57:44 IST" duration-ms="5582" status="PASS">
+        <test-method signature="checkoutpage()[pri:1, instance:testcase.checkout@38afe297]" started-at="2024-11-02T16:58:31 IST" name="checkoutpage" finished-at="2024-11-02T16:58:35 IST" duration-ms="3705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutpage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.checkout@38afe297]" started-at="2024-11-02T16:58:35 IST" name="teardown" finished-at="2024-11-02T16:58:35 IST" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.checkout@38afe297]" started-at="2024-11-02T16:58:35 IST" name="setup" finished-at="2024-11-02T16:58:39 IST" duration-ms="3840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="payment()[pri:2, instance:testcase.checkout@38afe297]" started-at="2024-11-02T16:58:39 IST" name="payment" finished-at="2024-11-02T16:58:42 IST" duration-ms="3794" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- payment -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.checkout@6c40365c]" started-at="2024-10-13T15:57:44 IST" name="teardown" finished-at="2024-10-13T15:57:44 IST" duration-ms="378" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.checkout@38afe297]" started-at="2024-11-02T16:58:42 IST" name="teardown" finished-at="2024-11-02T16:58:43 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
