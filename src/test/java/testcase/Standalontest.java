@@ -60,7 +60,7 @@ public class Standalontest {
 		String price = driver.findElement(By.xpath("(//tr/th)[10]")).getText();
 
 		String ep = "Total: $55.50";
-		 Assert.assertEquals(eps, price);
+		 Assert.assertEquals(epss, price);
 		
 		
 		
